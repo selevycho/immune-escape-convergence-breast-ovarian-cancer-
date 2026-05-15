@@ -1,0 +1,5 @@
+Case_ID	Cancer	Gene	Variant_Class	HGVSp
+04OV004, 04OV004	Ovarian_Cancer	B2M	Frame_Shift_Del	p.V69Ffs*14
+18BR003, 18BR003	Breast_Cancer	HLA-A	Missense_Mutation	p.E82Q
+05BR029, 05BR029	Breast_Cancer	B2M	Frame_Shift_Del	p.L15Ffs*41
+17OV001, 17OV001	Ovarian_Cancer	HLA-C	Missense_Mutation	p.R2W

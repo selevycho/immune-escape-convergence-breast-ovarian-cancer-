@@ -1,0 +1,85 @@
+
+mapping with 16 threads...
+
+ 0:00:02.22 Mapping ERR035489_1.fastq.gz to GEN reference...
+
+ 0:01:04.25 Mapping ERR035489_2.fastq.gz to GEN reference...
+
+ 0:02:07.36 Generating binary hit matrix.
+Warning: PySam not available on the system. Falling back to primitive SAM parsing.
+0:02:07.36 Loading alleles and read IDs from /home/fr/fr_fr/fr_os136/immune_escape_project/results/HLA/PEO23/PEO23_1.sam...
+0:02:07.74 11179 alleles and 1804 reads found.
+0:02:07.74 Initializing mapping matrix...
+0:02:07.74 1804x11179 mapping matrix initialized. Populating 715211 hits from SAM file...
+	10% completed
+0:02:41.92 715211 elements filled. Matrix sparsity: 1 in 28.20
+Warning: PySam not available on the system. Falling back to primitive SAM parsing.
+0:02:41.93 Loading alleles and read IDs from /home/fr/fr_fr/fr_os136/immune_escape_project/results/HLA/PEO23/PEO23_2.sam...
+0:02:42.27 11179 alleles and 1704 reads found.
+0:02:42.27 Initializing mapping matrix...
+0:02:42.27 1704x11179 mapping matrix initialized. Populating 676988 hits from SAM file...
+	10% completed
+	20% completed
+0:03:14.10 676988 elements filled. Matrix sparsity: 1 in 28.14
+0:03:14.22 Alignment pairing completed. 1251 paired, 900 unpaired, 53 discordant 
+
+ 0:03:15.73 temporary pruning of identical rows and columns
+
+ 0:03:15.76 Size of mtx with unique rows and columns: (480, 855)
+0:03:15.76 determining minimal set of non-overshadowed alleles
+
+ 0:03:16.63 Keeping only the minimal number of required alleles (35,)
+
+ 0:03:16.64 Creating compact model...
+
+starting ilp solver with 1 threads...
+
+ 0:03:16.67 Initializing OptiType model...
+WARNING: Initializing ordered Set R with a fundamentally unordered data source
+    (type: set).  This WILL potentially lead to nondeterministic behavior in
+    Pyomo
+WARNING: DEPRECATED: The Model.preprocess() method is deprecated and no longer
+    performs any actions  (deprecated in 6.0) (called from /home/fr/fr_fr/fr_o
+    s136/miniconda3/envs/optitype_stable/bin/OptiTypePipeline.py:416)
+GLPSOL: GLPK LP/MIP Solver, v4.57
+Parameter(s) specified in the command line:
+ --write /tmp/tmp5zwwxlxj.glpk.raw --wglp /tmp/tmpbxes8s_q.glpk.glp --cpxlp
+ /tmp/tmp83yvlbme.pyomo.lp
+Reading problem data from '/tmp/tmp83yvlbme.pyomo.lp'...
+/tmp/tmp83yvlbme.pyomo.lp:2295: warning: lower bound of variable 'x1' redefined
+/tmp/tmp83yvlbme.pyomo.lp:2295: warning: upper bound of variable 'x1' redefined
+306 rows, 183 columns, 1019 non-zeros
+108 integer variables, all of which are binary
+2403 lines were read
+Writing problem data to '/tmp/tmpbxes8s_q.glpk.glp'...
+2059 lines were written
+GLPK Integer Optimizer, v4.57
+306 rows, 183 columns, 1019 non-zeros
+108 integer variables, all of which are binary
+Preprocessing...
+62 hidden covering inequaliti(es) were detected
+299 rows, 180 columns, 1008 non-zeros
+106 integer variables, all of which are binary
+Scaling...
+ A: min|aij| =  1.000e+00  max|aij| =  6.000e+00  ratio =  6.000e+00
+Problem data seem to be well scaled
+Constructing initial basis...
+Size of triangular part is 299
+Solving LP relaxation...
+GLPK Simplex Optimizer, v4.57
+299 rows, 180 columns, 1008 non-zeros
+      0: obj =  -0.000000000e+00 inf =   4.000e+00 (4)
+      4: obj =  -4.000000000e-02 inf =   0.000e+00 (0)
+*   161: obj =   7.234200000e+02 inf =   1.221e-14 (0)
+OPTIMAL LP SOLUTION FOUND
+Integer optimization begins...
++   161: mip =     not found yet <=              +inf        (1; 0)
++   161: >>>>>   7.234200000e+02 <=   7.234200000e+02   0.0% (1; 0)
++   161: mip =   7.234200000e+02 <=     tree is empty   0.0% (0; 1)
+INTEGER OPTIMAL SOLUTION FOUND
+Time used:   0.0 secs
+Memory used: 0.5 Mb (475418 bytes)
+Writing MIP solution to '/tmp/tmp5zwwxlxj.glpk.raw'...
+491 lines were written
+
+ 0:03:16.88 Result dataframe has been constructed...
